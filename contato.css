@@ -1,0 +1,223 @@
+/* Reset de estilos e tipografia padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Fonte do tema Anime */
+body {
+  background: linear-gradient(135deg, #5e1a8f, #1a2d55); /* Gradiente roxo e azul escuro */
+  color: #fff;
+  font-family: 'Russo One', sans-serif; /* Fonte forte, estilo anime */
+  line-height: 1.6;
+}
+
+/* Estilos do Header */
+.custom-header {
+  background: linear-gradient(135deg, #9c27b0, #1976d2); /* Gradiente roxo e azul */
+  padding: 20px;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.store-name {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  font-family: 'Bangers', cursive; /* Fonte estilo anime */
+}
+
+.main-menu {
+  background-color: #333;
+  text-align: center;
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.main-menu li {
+  margin: 0 20px;
+}
+
+.main-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-menu a:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Remover o fundo laranja quando o link de navegação estiver ativo */
+.main-menu .active {
+  background-color: transparent; /* Remove o fundo laranja */
+}
+
+/* Seção de Contato */
+.contact-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: bounceIn 1s ease; /* Animação de entrada */
+}
+
+.contact-section h1 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: slideIn 1s ease-out; /* Animação do título */
+}
+
+.contact-description {
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos de informações de contato */
+.contact-info {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-item a {
+  color: #ffeb3b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #f44336;
+}
+
+/* WhatsApp */
+.whatsapp-contact {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Garante que o conteúdo fique centralizado verticalmente */
+}
+
+.whatsapp-btn {
+  display: inline-flex; /* Usando flex para o conteúdo do botão */
+  justify-content: center; /* Centraliza o texto e ícone dentro do botão */
+  align-items: center; /* Garante que o ícone e o texto fiquem alinhados no centro */
+  background: linear-gradient(135deg, #5e1a8f, #1a2d55); /* Gradiente roxo e azul escuro */
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Bangers', sans-serif;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  width: 250px; /* Ajustando o tamanho do botão */
+  height: 60px;
+  background-size: 30px 30px;
+  text-align: center;
+  line-height: 60px; /* Para centralizar verticalmente o texto */
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de hover */
+}
+
+.whatsapp-icon {
+  font-size: 16px;
+  color: #25d366; /* Cor verde característica do ícone do WhatsApp */
+  position: relative;
+  z-index: 1; /* Garante que o texto fique sobre o ícone */
+}
+
+.whatsapp-icon span {
+  padding-left: 10px;
+  color: #fff; /* Mantém o texto "Conversar no WhatsApp" em branco */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Efeitos de animação */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+
+footer p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}

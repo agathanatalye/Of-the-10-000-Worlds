@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Of the 10,000 Worlds</title>
+  <link rel="stylesheet" href="newcss.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@300;400;500&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="custom-header">
+    <div class="top-bar"></div>
+    <div class="header-main">
+      <div class="logo-search">
+        <img src="anime.png" alt="Logo LojaAnime" class="logo">
+        <span class="store-name">Of the 10,000 Worlds</span>
+      </div>
+    </div>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="index.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de Produtos -->
+  <main class="product-section">
+    <h1>Produtos</h1>
+    <div class="product-grid">
+      <!-- Produto 1: Cosplay Luffy (One Piece) -->
+      <div class="product-card" id="product1">
+        <img src="camisaluffy.jpg" alt="Cosplay Luffy">
+        <h2>Camiseta Luffy - One Piece</h2>
+        <p class="price">R69,90</p>
+        <button class="view-product" onclick="showModal('product1')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 2: Chaveiro My Hero Academia -->
+      <div class="product-card" id="product2">
+        <img src="chaveiro3.jpg" alt="Chaveiro My Hero Academia">
+        <h2>Chaveiro - My Hero Academia</h2>
+        <p class="price">R$9,90</p>
+        <button class="view-product" onclick="showModal('product2')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 3: Pôster Hunter x Hunter -->
+      <div class="product-card" id="product3">
+        <img src="hunter1.jpg" alt="Pôster Hunter x Hunter">
+        <h2>Pôster Hunter x Hunter</h2>
+        <p class="price">R$39,90</p>
+        <button class="view-product" onclick="showModal('product3')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 4: Pôster Kaneki - Tokyo Ghoul -->
+      <div class="product-card" id="product4">
+        <img src="posterkaneki.jpg" alt="Pôster Kaneki">
+        <h2>Pôster Kaneki - Tokyo Ghoul</h2>
+        <p class="price">R$79,90</p>
+        <button class="view-product" onclick="showModal('product4')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 5: Figura Kagami - Kuroko no Basket -->
+      <div class="product-card" id="product5">
+        <img src="kagamifigure.jpg" alt="Figura Kagami">
+        <h2>Figure Kagami - Kuroko no Basket</h2>
+        <p class="price">R$200,90</p>
+        <button class="view-product" onclick="showModal('product5')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 6: Caneca Kagami - Kuroko no Basket -->
+    <div class="product-card" id="product20">
+        <img src="canecabakugo.jfif" alt="Caneca Kagami">
+        <h2>Caneca Bakugou -  My Hero Academia</h2>
+        <p class="price">R$39,90</p>
+         <button class="view-product" onclick="showModal('product20')">Ver Produto</button>
+      </div>
+      
+
+      <!-- Produto 7: Livro Arifureta: From Commonplace to World's Strongest -->
+      <div class="product-card" id="product7">
+        <img src="Arifureta.jpg" alt="Livro Arifureta">
+        <h2>Livro Arifureta: From Commonplace to World's Strongest</h2>
+        <p class="price">R$59,90</p>
+        <button class="view-product" onclick="showModal('product7')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 8: Camiseta Zoro - One Piece -->
+      <div class="product-card" id="product8">
+        <img src="camisa_zoro.jpg" alt="Camiseta Zoro">
+        <h2>Camiseta Zoro - One Piece</h2>
+        <p class="price">R$90,00</p>
+        <button class="view-product" onclick="showModal('product8')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 9: Camiseta My Hero Academia -->
+      <div class="product-card" id="product9">
+        <img src="camisaacademia.jfif" alt="Camiseta My Hero Academia">
+        <h2>Camiseta My Hero Academia</h2>
+        <p class="price">R$69,90</p>
+        <button class="view-product" onclick="showModal('product9')">Ver Produto</button>
+      </div>
+      
+      
+      <!-- Produto 10: Almofada Bakugo - My Hero Academia -->
+      <div class="product-card" id="product10">
+        <img src="almofadabakugo.jpg" alt="Almofada Bakugo">
+        <h2>Almofada Bakugo - My Hero Academia</h2>
+        <p class="price">R$39,90</p>
+        <button class="view-product" onclick="showModal('product10')">Ver Produto</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de Produto -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modal-img" src="" alt="Imagem do Produto" class="imagemmodel">
+      <h2 id="modal-title">Título do Produto</h2>
+      <p id="modal-description">Descrição completa do produto...</p>
+    </div>
+  </div>
+
+  <script>
+    // Função para mostrar o modal
+    function showModal(productId) {
+      const modal = document.getElementById('product-modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDescription = document.getElementById('modal-description');
+
+      if (productId === 'product1') {
+        modalImg.src = 'camisaluffy.jpg';
+        modalTitle.innerText = 'Camiseta Luffy - One Piece';
+        modalDescription.innerText = 'Esta camiseta do Luffy traz o visual do capitão do Chapéu de Palha. Com design vibrante e feito de material confortável, ela é perfeita para fãs de One Piece.';
+      } else if (productId === 'product2') {
+        modalImg.src = 'chaveiro3.jpg';
+        modalTitle.innerText = 'Chaveiro My Hero Academia';
+        modalDescription.innerText = 'Este chaveiro traz um dos heróis mais icônicos de My Hero Academia, sendo um acessório compacto e cheio de estilo para quem deseja carregar um pedaço do anime.';
+      } else if (productId === 'product3') {
+        modalImg.src = 'hunter1.jpg';
+        modalTitle.innerText = 'Pôster Hunter x Hunter';
+        modalDescription.innerText = 'Pôster de alta qualidade com uma arte incrível de Hunter x Hunter. Ideal para decorar seu ambiente com a essência do anime.';
+      } else if (productId === 'product4') {
+        modalImg.src = 'posterkaneki.jpg';
+        modalTitle.innerText = 'Pôster Kaneki - Tokyo Ghoul';
+        modalDescription.innerText = 'Pôster de Kaneki com design impactante, perfeito para os fãs de Tokyo Ghoul, mostrando sua transformação e a luta interna do personagem.';
+      } else if (productId === 'product5') {
+        modalImg.src = 'kagamifigure.jpg';
+        modalTitle.innerText = 'Figure Kagami - Kuroko no Basket';
+        modalDescription.innerText = 'Figure detalhada de Kagami, um dos personagens principais de Kuroko no Basket, em uma pose dinâmica, perfeita para os colecionadores do anime.';
+      } else if (productId === 'product20') {
+         modalImg.src = 'canecabakugo.jfif';
+        modalTitle.innerText = 'Caneca Bakugou - My Hero Academia';
+        modalDescription.innerText = 'Caneca do Bakugo para fãs de My Hero Academia. Com design explosivo, é feita em cerâmica de alta qualidade, ideal para bebidas quentes ou frias. Durável e estilosa, perfeita para o dia a dia ou como item de coleção.';
+        }else if (productId === 'product7') {
+        modalImg.src = 'Arifureta.jpg';
+        modalTitle.innerText = 'Livro Arifureta: From Commonplace to World\'s Strongest';
+        modalDescription.innerText = 'O livro Arifureta conta a história de Hajime, um estudante que foi transportado para outro mundo e teve que enfrentar desafios enormes para se tornar o mais forte.';
+      } else if (productId === 'product8') {
+        modalImg.src = 'camisa_zoro.jpg';
+        modalTitle.innerText = 'Camiseta Zoro - One Piece';
+        modalDescription.innerText = 'Camiseta estilosa com a imagem de Zoro, o espadachim de One Piece. Perfeita para fãs do anime e do personagem!';
+      } else if (productId === 'product9') {
+        modalImg.src = 'camisaacademia.jfif';
+        modalTitle.innerText = 'Camiseta My Hero Academia';
+        modalDescription.innerText = 'Camiseta com o logo de My Hero Academia, com um design moderno e perfeito para quem é fã da série.';
+      } else if (productId === 'product10') {
+        modalImg.src = 'almofadabakugo.jpg';
+        modalTitle.innerText = 'Almofada Bakugo - My Hero Academia';
+        modalDescription.innerText = 'Almofada com a imagem de Bakugo, ideal para quem adora o anime e quer decorar a casa com algo único.';
+      }
+
+      modal.style.display = 'block';
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+      const modal = document.getElementById('product-modal');
+      modal.style.display = 'none';
+    }
+
+    // Fechar o modal se clicar fora da área do modal
+    window.onclick = function(event) {
+      const modal = document.getElementById('product-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
